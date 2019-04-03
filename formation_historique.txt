@@ -1,0 +1,364 @@
+    1  ps
+    2  tty
+    3  echo bonjour
+    4  ps
+    5  ls
+    6  alias
+    7  cd ..
+    8  ls
+    9  exit
+   10  IFS=":"
+   11  set aa:bb:cc
+   12  echo $1
+   13  var="aa:bb:cc"
+   14  set $var
+   15  echo $1
+   16  set "qqqq:z:azert"
+   17  echo $1
+   18  IFS=":"
+   19  set "qqqq:z:azert"
+   20  echo $1
+   21  cd tmp
+   22  cd Documents/
+   23  cd tmp/
+   24  gedit test
+   25  logger -p local1.err "coucou c'est moi"
+   26  logger -p local0.err "coucou c'est moi"
+   27  logger -p local5.err "coucou c'est moi"
+   28  logger -p -i local5.err "coucou c'est moi"
+   29  logger -i -p local5.err "coucou c'est moi"
+   30  yes
+   31  no
+   32  ls -lh
+   33  df -h
+   34  yes > sol
+   35  df -h
+   36  ls -lh
+   37  rm sol 
+   38  ls
+   39  ll
+   40  ll -h
+   41  ll
+   42  find / -name passwd
+   43  find / -name passwd | wc -l
+   44  find / -name passwd 2> /dev/null | wc -l
+   45  /dev/zero > sol
+   46  ls -R /
+   47  more /etc/passwd
+   48  more /etc/passwd | wc -3
+   49  wc
+   50  wc --help
+   51  more /etc/passwd | cut d'\n'
+   52  more /etc/passwd | cut f'\n'
+   53  head
+   54  head -3 /etc/passwd
+   55  head -3 /etc/passwd | tail -2
+   56  head -3 /etc/passwd | tail -1
+   57  head -5 /etc/passwd | tail -1
+   58  grep 
+   59  grep --help
+   60  head -5 /etc/passwd | tail -1
+   61  head -3 /etc/passwd | tail -1
+   62  head -99999 /etc/passwd | tail -1
+   63  head -999999999 /etc/passwd | tail -1
+   64  head -3 /etc/passwd | tail -1
+   65  h
+   66  cut -d: -f 3 /etc/passwd
+   67  cut -d: -f 3 /etc/passwd | sort -n
+   68* cut -d: -f 3 /etc/passwd | sort -n | tail -1
+   69* 
+   70  h
+   71  history
+   72  cd ..
+   73  history > formation_historique.txt
+    1  root
+    2  sudo
+    3  sudo root
+    4  pwd
+    5  ls
+    6  cd Documents/
+    7  gedit
+    8  ps
+    9  tty 
+   10  ps
+   11  tty 
+   12  echo bonjour > /dev/pts/1
+   13  bash ps
+   14  bash tty
+   15  echo bonjour > /dev/pts/1
+   16  vi /etc/passwd
+   17  less /etc/passwd
+   18  vi /etc/passwd
+   19  less /etc/passwd
+   20  less /etc/passwd 
+   21  cat /etc/shells
+   22* 
+   23* 
+   24  set -o
+   25  vi
+   26  set -o noclobber
+   27  echo salut > sol
+   28  echo salut >| sol
+   29  echo salut2 > sol
+   30  cat sol
+   31  echo salut2 >| sol
+   32  cat sol
+   33  history
+   34  tty 
+   35  alias
+   36  ls
+   37  cd ..
+   38  ls
+   39  cd sol
+   40  ll
+   41  ls
+   42  cd Documents/
+   43  alias h=history
+   44  h
+   45  unalias h
+   46  $path
+   47  unalias ls
+   48  ls
+   49  alias
+   50  type ls
+   51  type ll
+   52  type find
+   53  type cd
+   54  echo $path
+   55  echo $PATH
+   56  pwd
+   57  echo $IFS
+   58  echo $IFS2
+   59  cat /etc/passwd
+   60  set aa bb cc
+   61  echo $1
+   62  echo $2
+   63  touch jean marc
+   64  ls
+   65  touch 'jean marc'
+   66  ls
+   67  ls -li
+   68  ls -a
+   69  ls -A
+   70  ls
+   71  ls -lrt
+   72  date
+   73  date --help
+   74     date + "couco %Y et %H"
+   75     date +"couco %Y et %H"
+   76  date +
+   77  gedit
+   78  alias
+   79  alias history=h
+   80  alias h=history
+   81  alias c='chmod+x'
+   82  set -o noclobber
+   83  alias
+   84  unalias history
+   85  alias
+   86  h
+   87  alias
+   88  echo $env
+   89  env
+   90  echo $
+   91  set
+   92  h
+   93  set -o
+   94  env
+   95  set -o
+   96  ps
+   97  cd tmp/
+   98  ./test
+   99  c test
+  100  unalias c
+  101  alias c='chmod +x'
+  102  c test
+  103  ./test
+  104  bash -x test
+  105  ifconfig
+  106  date >| test
+  107  bash -x test
+  108  cat test 
+  109  cd ..
+  110  mkdir lab
+  111  id
+  112  whoami
+  113  pty
+  114  tty
+  115  hostname
+  116  uname -n
+  117  uname -a
+  118  touch first_script
+  119  echo $hostname
+  120  echo hostname
+  121  $HOSTNAME
+  122  echo $HOSTNAME
+  123  who
+  124  last
+  125  cal
+  126  h
+  127  bash prog1.bash 
+  128  cd lab/
+  129  bash -x prog1.bash 
+  130  bash -v prog1.bash 
+  131  bash -x prog1.bash 
+  132  set -x
+  133  bash prog1.bash 
+  134  set +x
+  135  bash -x prog1.bash 
+  136  xtrace
+  137  bash -x prog1.bash 
+  138  bash prog1.bash 
+  139  bash -x prog1.bash 
+  140  bash prog1.bash 
+  141  bash prog1.bash > sol
+  142  mkdir /home/usere/bin
+  143  cp prog1.bash /home/usere/bin/
+  144  prog1.bash
+  145  c /home/usere/bin/prog1.bash
+  146  prog1.bash
+  147  wc /etc/passwd
+  148  wc -l /etc/passwd
+  149  head -5 /etc/passwd
+  150  tail -5 /etc/passwd
+  151  tail -f /var/log/messages
+  152  su -
+  153  file ..
+  154  file ../*
+  155  file /etc/*
+  156  file /usr/bin/*
+  157  echo /etc/magic
+  158  cat /etc/magic
+  159  od -xc prog1.bash
+  160  cmp prog1.bash prog1.bash
+  161  diff prog1.bash prog1.bash
+  162  paste prog1.bash prog1.bash
+  163  cut -c 2-5 prog1.bash
+  164  cut -c 2- prog1.bash
+  165  cut -c -2 prog1.bash
+  166  cut -c -8 prog1.bash
+  167  cut -d -f 1 prog1.bash
+  168  cut -d: -f 1 prog1.bash
+  169  cut -d' ' -f 1 prog1.bash
+  170  cut -d' ' -f 1,4 prog1.bash
+  171  cut -d' ' -f 1-4 prog1.bash
+  172  cat /etc/host
+  173  awk '{print "login="$1 "UID="$2"}' /etc/passwd
+  174  awk -F: '{print "login="$1 "UID="$2}' /etc/passwd
+  175  awk '{print $1}' /etc/passwd
+  176  awk '{print $3}' /etc/passwd
+  177  awk '{print $4}' /etc/passwd
+  178  awk '{print $1}' /etc/passwd
+  179  awk  '{print $1}' /etc/passwd
+  180  awk '{print $1}' /etc/passwd
+  181  awk -F: '{print $1}' /etc/passwd
+  182  awk -F: '{print $3}' /etc/passwd
+  183  awk -F: '{print "User="$1 "UID=" $3 "??=" $4}' /etc/passwd
+  184  awk -F: '{print "User="$1 " UID=" $3 " ??=" $4}' /etc/passwd
+  185  cat /etc/passwd
+  186  awk -F: '{print $1,   $3}' /etc/passwd
+  187  awk -F: '{print $1,$3}' /etc/passwd
+  188  awk -F: '{print "User="$1", UID=" $3", ??=" $4}' /etc/passwd
+  189  cut -d: -f 1,3 /etc/passwd
+  190  cut -d: -f 1,2 /etc/passwd
+  191  cut -d: -f 1,3 /etc/passwd
+  192  sort /etc/passwd
+  193  sort -t :k3  /etc/passwd
+  194  sort -t: -k3  /etc/passwd
+  195  sort -t: -k3n  /etc/passwd
+  196  sort -t: -k3  /etc/passwd
+  197  sort -t: -k3n  /etc/passwd
+  198  sort -t: -k3  /etc/passwd
+  199  sort -t: -k3n  /etc/passwd
+  200  sort -t: -r  -k3n  /etc/passwd
+  201  sort -t: -k3n -r  /etc/passwd
+  202  sort -t: -k3nr  /etc/passwd
+  203  sort -t: -k3r  /etc/passwd
+  204  sort -t: -k3nr  /etc/passwd0
+  205  sort -t: -k3nr  /etc/passwd
+  206  who
+  207  who | tr -s ' '
+  208  awk '{print $3}' who
+  209  who | $awk '{print $3}'
+  210  who | awk '{print $3}'
+  211  h
+  212  who | cut -d:' ' -f 3
+  213  who | cut -d:  -f 3
+  214  who | cut -d' '  -f 3
+  215  who | tr -s ' '
+  216  who | awk '{print $3}'
+  217  echo " Répertoire $HOME=$HOME et date"
+  218  echo ' Répertoire $HOME=$HOME et date'
+  219  echo " Répertoire $HOME=$HOME et `date`"
+  220  echo " Répertoire \$HOME=$HOME et `date`"
+  221  echo " Répertoire \$HOME=$HOME \n et \t\t\t`date`"
+  222  echo " Répertoire \$HOME=$HOME \n et\t\t\t`date`"
+  223  echo -e " Répertoire \$HOME=$HOME \n et\t\t\t`date`"
+  224  mkdir essai
+  225  cd essai/
+  226  touch * fic autre
+  227  ll
+  228  rm *
+  229  ls
+  230  touch * fic autre
+  231  rm \*
+  232  ll
+  233  rm *
+  234  cd ..
+  235  cd essai/
+  236  touch $(date)
+  237  ll
+  238  rm *
+  239  touch '$(date)'
+  240  ls
+  241  rm *
+  242  touch \$(date)
+  243  touch '$(date)'
+  244  touch "$(date)"
+  245  ls
+  246  ll
+  247  rm $(date)
+  248  ll
+  249  rm '$(date)'
+  250  rm "$(date)"
+  251  ps -ef | more
+  252  h
+  253  echo $LANG
+  254  cd ..
+  255  date +%A
+  256  village=Salon
+  257  export VILLE="Triel"
+  258  echo $village 
+  259  echo $VILLE 
+  260  bash
+  261  ps -l
+  262  echo $VILLE 
+  263  echo $village 
+  264  echo $sante
+  265  echo $PAYS
+  266  date
+  267  h
+  268  var=opera
+  269  echo $var
+  270  echo '$var'tion
+  271  echo "$var"tion
+  272  echo ${var}tion
+  273  ls
+  274  pwd
+  275  cd ..
+  276  gedit .bash_profile 
+  277  cd Documents/
+  278  cd ..
+  279  . ./.bash_profile 
+  280  set +o noclobber
+  281  . ./.bash_profile 
+  282  echo $VILLE
+  283  echo $PATH
+  284  gedit .bashrc 
+  285  h
+  286  gedit .bash_profile 
+  287  gedit .bashrc
+  288  ls
+  289  cd Documents/
+  290  ls
+  291  h >> formation_historique.txt 
